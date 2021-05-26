@@ -150,7 +150,7 @@
     </div>
     <div class="row">
       <div class="col text-center">
-        <button type="submit" class="btn btn-primary" @click="tradeDidPress()">
+        <button type="submit" class="button is-medium is-rounded is-success" @click="tradeDidPress()">
           Trade
         </button>
       </div>
@@ -182,37 +182,39 @@ export default {
     axios
       .get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
       .then((response) => {
-        console.log("Get pokemon list");
         this.pokemons = response.data.results;
         this.pokemons.unshift({ name: "Choose one pokemon", url: "" });
-        console.log(this.pokemons);
       });
   },
   methods: {
-    addGivenPower(pokemonIndex, index) {
+    addGivenPower(pokemonIndex, index) {      
+
       if (pokemonIndex == 0) {
         delete this.givenPokemons[index];
       } else {
-        this.givenPokemons.splice(index, 1, this.pokemons[pokemonIndex]);
+        axios
+        .get(this.pokemons[pokemonIndex].url)
+        .then((response) => {
+          this.givenPokemons.splice(index, 1, {name: this.pokemons[pokemonIndex].name, power: response.data.base_experience});
+          this.totalGivenPower = this.givenPokemons.reduce( (total, current) => total + current.power, 0 );
+          this.updateTradeMessage();
+        });
       }
 
-      this.totalGivenPower = this.givenPokemons.reduce(
-        (total, current) => total + current.power,
-        0
-      );
+      this.totalGivenPower = this.givenPokemons.reduce( (total, current) => total + current.power, 0 );
       this.updateTradeMessage();
     },
     addOfferPower(pokemonIndex, index) {
       if (pokemonIndex == 0) {
         delete this.offerPokemons[index];
       } else {
-        this.offerPokemons.splice(index, 1, this.pokemons[pokemonIndex]);
+          axios.get(this.pokemons[pokemonIndex].url).then((response) => {
+            this.offerPokemons.splice(index, 1, {name: this.pokemons[pokemonIndex].name, power: response.data.base_experience});
+            this.totalOfferPower = this.offerPokemons.reduce((total, current) => total + current.power, 0);
+            this.updateTradeMessage();
+          });
       }
-
-      this.totalOfferPower = this.offerPokemons.reduce(
-        (total, current) => total + current.power,
-        0
-      );
+      this.totalOfferPower = this.offerPokemons.reduce((total, current) => total + current.power, 0);
       this.updateTradeMessage();
     },
     updateTradeMessage() {
