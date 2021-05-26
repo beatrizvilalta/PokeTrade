@@ -3,9 +3,9 @@
     <div class="column is-half is-offset-one-quarter">
       <hr>
       <h4 class="is-size-4">Pokedex</h4>
-      <input input class="input is-rounded" type="text" placeholder="Buscar pokemon pelo nome">
-      <button class="button is-fullwidth is-success" id="searchBtn" @click="search_pokemon">Buscar</button>
-      <div v-for="(poke,index) in filteresPokemons" :key="index"> 
+      <!-- <input input class="input is-rounded" type="text" placeholder="Buscar pokemon pelo nome">
+      <button class="button is-fullwidth is-success" id="searchBtn" @click="search_pokemon">Buscar</button> -->
+      <div v-for="(poke,index) in pokemons" :key="index"> 
       <Pokemon :name="poke.name" :url="poke.url" :num="index+1"/>
     </div>
     </div>
@@ -64,6 +64,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: #fbfbfb; 
 }
 
 #searchBtn {
