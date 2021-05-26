@@ -6,78 +6,66 @@
         <div class="list-group">
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 0)"
-          >
+            v-on:change="addGivenPower($event.target.value, 0)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 1)"
-          >
+            v-on:change="addGivenPower($event.target.value, 1)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 2)"
-          >
+            v-on:change="addGivenPower($event.target.value, 2)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 3)"
-          >
+            v-on:change="addGivenPower($event.target.value, 3)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 4)"
-          >
+            v-on:change="addGivenPower($event.target.value, 4)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 5)"
-          >
+            v-on:change="addGivenPower($event.target.value, 5)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
@@ -92,78 +80,66 @@
         <div class="list-group">
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 0)"
-          >
+            v-on:change="addOfferPower($event.target.value, 0)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 1)"
-          >
+            v-on:change="addOfferPower($event.target.value, 1)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 2)"
-          >
+            v-on:change="addOfferPower($event.target.value, 2)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 3)"
-          >
+            v-on:change="addOfferPower($event.target.value, 3)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 4)"
-          >
+            v-on:change="addOfferPower($event.target.value, 4)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 5)"
-          >
+            v-on:change="addOfferPower($event.target.value, 5)">
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index"
-            >
+              :value="index">
               {{ pokemon.name }}
             </option>
           </select>
@@ -208,7 +184,7 @@ export default {
       .then((response) => {
         console.log("Get pokemon list");
         this.pokemons = response.data.results;
-        this.pokemons.unshift({name: "Choose one pokemon",url: ""})
+        this.pokemons.unshift({ name: "Choose one pokemon", url: "" });
         console.log(this.pokemons);
       });
   },
