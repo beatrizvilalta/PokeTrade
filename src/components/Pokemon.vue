@@ -16,7 +16,7 @@
         </div>
 
         <div class="content">
-            <button class="button is-medium" @click="changeSprite">Mudar Sprite</button>
+            <button class="button is-medium" @click="changeSprite">Change Sprite</button>
         </div>
         
       </div>

@@ -1,0 +1,57 @@
+<template>
+  <div class="pokemons">
+    <div class="column is-half is-offset-one-quarter">
+      <h4 class="is-size-4">Pokemon List</h4>
+      <small>Checkout the first generation Pokemons for your trade.</small>
+      <router-link to="/trades" tag="button" class="button is-rounded is-small is-success is-fullwidth">Start Trade</router-link>
+      <div v-for="(poke, index) in pokemons" :key="index">
+        <Pokemon :name="poke.name" :url="poke.url" :num="index + 1" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+// @ is an alias to /src
+import Pokemon from "@/components/Pokemon.vue";
+import axios from "axios";
+
+export default {
+  name: "pokemon",
+  data() {
+    return {
+      pokemons: [],
+      filteresPokemons: [],
+      search: "",
+    };
+  },
+  created: function () {
+    axios
+      .get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
+      .then((response) => {
+        console.log("Get pokemon list");
+        this.pokemons = response.data.results;
+        this.filteresPokemons = response.data.results;
+      });
+  },
+  components: {
+    Pokemon
+  },
+  methods: {
+    search_pokemon: function () {
+      this.filteresPokemons = this.pokemons;
+      if (this.search == "" || this.search == " ") {
+        this.filteresPokemons = this.pokemons;
+      } else {
+        this.filteresPokemons = this.pokemons.filter(
+          (pokemon) => pokemon.name == this.search
+        );
+      }
+    },
+  },
+};
+</script>
+
+
+
+
