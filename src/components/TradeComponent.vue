@@ -218,20 +218,29 @@ export default {
       this.updateTradeMessage();
     },
     updateTradeMessage() {
-      if (this.totalGivenPower <= this.totalOfferPower) {
-        this.tradeMessage = "Tá valendo";
+      if (this.totalGivenPower == 0 && this.totalOfferPower == 0) {
+        this.tradeMessage = "";
+      } else if (this.totalGivenPower < this.totalOfferPower){
+        this.tradeMessage = "Trade is worth it";
       } else {
-        this.tradeMessage = "Vale não po, mas se quiser pode ir lá";
+        this.tradeMessage = "Trade is not worth it.";
       }
     },
     tradeDidPress() {
-      console.log("GIVEN");
-      console.log(this.givenPokemons);
+      if (this.totalOfferPower > this.totalGivenPower) {
+        alert('Trade is not worth it');
+      } else if(this.totalGivenPower == 0 && this.totalOfferPower == 0) {
+        alert('Choose your pokemons');
+      } else {
+        console.log("GIVEN");
+        console.log(this.givenPokemons);
 
-      console.log("OFFER");
-      console.log(this.offerPokemons);
-    },
-  },
+        console.log("OFFER");
+        console.log(this.offerPokemons);
+      }
+      
+    }
+  }
 };
 </script>
 
