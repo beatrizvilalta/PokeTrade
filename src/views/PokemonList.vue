@@ -20,34 +20,19 @@ export default {
   name: "pokemon",
   data() {
     return {
-      pokemons: [],
-      filteresPokemons: [],
-      search: "",
+      pokemons: []
     };
   },
-  created: function () {
+  created() {
     axios
       .get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
       .then((response) => {
         console.log("Get pokemon list");
         this.pokemons = response.data.results;
-        this.filteresPokemons = response.data.results;
       });
   },
   components: {
     Pokemon
-  },
-  methods: {
-    search_pokemon: function () {
-      this.filteresPokemons = this.pokemons;
-      if (this.search == "" || this.search == " ") {
-        this.filteresPokemons = this.pokemons;
-      } else {
-        this.filteresPokemons = this.pokemons.filter(
-          (pokemon) => pokemon.name == this.search
-        );
-      }
-    },
   },
 };
 </script>
