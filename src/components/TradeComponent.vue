@@ -1,8 +1,13 @@
 <template>
   <div class="container" id="container">
+    <div class="row" id="messageContainer">
+      <div class="col text-center">
+        <p v-bind:class="[worthIt ? 'message is-success' : 'message is-danger']">{{ tradeMessage }}</p>
+      </div>
+    </div>
     <div class="row justify-content-center">
       <div class="col">
-        <h2 class="text-center">Giving cards</h2>
+        <h2 class="text-center title is-5">Giving cards</h2>
         <div class="list-group">
           <select
             class="form-select form-select-lg mb-3"
@@ -75,7 +80,7 @@
       </div>
 
       <div class="col">
-        <h2 class="text-center">Offer cards</h2>
+        <h2 class="text-center title is-5">Offer cards</h2>
 
         <div class="list-group">
           <select
@@ -150,14 +155,9 @@
     </div>
     <div class="row">
       <div class="col text-center">
-        <button type="submit" class="button is-medium is-rounded is-success" @click="tradeDidPress()">
+        <button type="submit" class="button is-medium is-rounded is-success" @click="tradeDidPress()" id="tradeBtn">
           Trade
         </button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col text-center">
-        <p>{{ tradeMessage }}</p>
       </div>
     </div>
   </div>
@@ -176,6 +176,7 @@ export default {
       offerPokemons: new Array(6),
       totalOfferPower: 0,
       tradeMessage: "",
+      worthIt: true
     };
   },
   created() {
@@ -222,15 +223,17 @@ export default {
         this.tradeMessage = "";
       } else if (this.totalGivenPower < this.totalOfferPower){
         this.tradeMessage = "Trade is worth it";
+        this.worthIt = true;
       } else {
         this.tradeMessage = "Trade is not worth it.";
+        this.worthIt = false;
       }
     },
     tradeDidPress() {
-      if (this.totalOfferPower > this.totalGivenPower) {
-        alert('Trade is not worth it');
-      } else if(this.totalGivenPower == 0 && this.totalOfferPower == 0) {
+      if (this.totalGivenPower == 0 && this.totalOfferPower == 0) {
         alert('Choose your pokemons');
+      } else if(!this.worthIt) {
+        alert('Trade is not worth it');
       } else {
         console.log("GIVEN");
         console.log(this.givenPokemons);
@@ -238,7 +241,6 @@ export default {
         console.log("OFFER");
         console.log(this.offerPokemons);
       }
-      
     }
   }
 };
@@ -248,4 +250,19 @@ export default {
 #container {
   margin-top: 30px;
 }
+
+#messageContainer {
+  margin-bottom: 20px;
+
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+#tradeBtn {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
 </style>
