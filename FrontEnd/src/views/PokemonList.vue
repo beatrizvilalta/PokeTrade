@@ -27,7 +27,6 @@ export default {
     axios
       .get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
       .then((response) => {
-        console.log("Get pokemon list");
         this.pokemons = response.data.results;
       });
   },
