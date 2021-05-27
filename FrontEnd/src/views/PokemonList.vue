@@ -2,7 +2,7 @@
   <div class="pokemons">
     <div class="column is-half is-offset-one-quarter">
       <h4 class="title is-5">Pokemon List</h4>
-      <small>Checkout the first generation Pokemons for your trade.</small>
+      <h4>Checkout the first generation Pokemons for your trade.</h4>
       <router-link to="/trades" tag="button" class="button is-rounded is-small is-success is-fullwidth">Start Trade</router-link>
       <div v-for="(poke, index) in pokemons" :key="index">
         <Pokemon :name="poke.name" :url="poke.url" :num="index + 1" />
