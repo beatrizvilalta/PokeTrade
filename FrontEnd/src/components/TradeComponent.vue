@@ -2,7 +2,11 @@
   <div class="container" id="container">
     <div class="row" id="messageContainer">
       <div class="col text-center">
-        <p v-bind:class="[worthIt ? 'message is-success' : 'message is-danger']">{{ tradeMessage }}</p>
+        <p
+          v-bind:class="[worthIt ? 'message is-success' : 'message is-danger']"
+        >
+          {{ tradeMessage }}
+        </p>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -11,66 +15,78 @@
         <div class="list-group">
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 0)">
+            v-on:change="addGivenPower($event.target.value, 0)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 1)">
+            v-on:change="addGivenPower($event.target.value, 1)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 2)">
+            v-on:change="addGivenPower($event.target.value, 2)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 3)">
+            v-on:change="addGivenPower($event.target.value, 3)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 4)">
+            v-on:change="addGivenPower($event.target.value, 4)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addGivenPower($event.target.value, 5)">
+            v-on:change="addGivenPower($event.target.value, 5)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
@@ -85,66 +101,78 @@
         <div class="list-group">
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 0)">
+            v-on:change="addOfferPower($event.target.value, 0)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 1)">
+            v-on:change="addOfferPower($event.target.value, 1)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 2)">
+            v-on:change="addOfferPower($event.target.value, 2)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 3)">
+            v-on:change="addOfferPower($event.target.value, 3)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 4)">
+            v-on:change="addOfferPower($event.target.value, 4)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
 
           <select
             class="form-select form-select-lg mb-3"
-            v-on:change="addOfferPower($event.target.value, 5)">
+            v-on:change="addOfferPower($event.target.value, 5)"
+          >
             <option
               v-for="(pokemon, index) in pokemons"
               :key="index"
-              :value="index">
+              :value="index"
+            >
               {{ pokemon.name }}
             </option>
           </select>
@@ -155,7 +183,12 @@
     </div>
     <div class="row">
       <div class="col text-center">
-        <button type="submit" class="button is-medium is-rounded is-success" @click="tradeDidPress()" id="tradeBtn">
+        <button
+          type="submit"
+          class="button is-medium is-rounded is-success"
+          @click="tradeDidPress()"
+          id="tradeBtn"
+        >
           Trade
         </button>
       </div>
@@ -176,7 +209,7 @@ export default {
       offerPokemons: new Array(6),
       totalOfferPower: 0,
       tradeMessage: "",
-      worthIt: true
+      worthIt: true,
     };
   },
   created() {
@@ -188,40 +221,55 @@ export default {
       });
   },
   methods: {
-    addGivenPower(pokemonIndex, index) {      
-
+    addGivenPower(pokemonIndex, index) {
       if (pokemonIndex == 0) {
         delete this.givenPokemons[index];
       } else {
-        axios
-        .get(this.pokemons[pokemonIndex].url)
-        .then((response) => {
-          this.givenPokemons.splice(index, 1, {name: this.pokemons[pokemonIndex].name, power: response.data.base_experience});
-          this.totalGivenPower = this.givenPokemons.reduce( (total, current) => total + current.power, 0 );
+        axios.get(this.pokemons[pokemonIndex].url).then((response) => {
+          this.givenPokemons.splice(index, 1, {
+            name: this.pokemons[pokemonIndex].name,
+            power: response.data.base_experience,
+          });
+          this.totalGivenPower = this.givenPokemons.reduce(
+            (total, current) => total + current.power,
+            0
+          );
           this.updateTradeMessage();
         });
       }
 
-      this.totalGivenPower = this.givenPokemons.reduce( (total, current) => total + current.power, 0 );
+      this.totalGivenPower = this.givenPokemons.reduce(
+        (total, current) => total + current.power,
+        0
+      );
       this.updateTradeMessage();
     },
     addOfferPower(pokemonIndex, index) {
       if (pokemonIndex == 0) {
         delete this.offerPokemons[index];
       } else {
-          axios.get(this.pokemons[pokemonIndex].url).then((response) => {
-            this.offerPokemons.splice(index, 1, {name: this.pokemons[pokemonIndex].name, power: response.data.base_experience});
-            this.totalOfferPower = this.offerPokemons.reduce((total, current) => total + current.power, 0);
-            this.updateTradeMessage();
+        axios.get(this.pokemons[pokemonIndex].url).then((response) => {
+          this.offerPokemons.splice(index, 1, {
+            name: this.pokemons[pokemonIndex].name,
+            power: response.data.base_experience,
           });
+          this.totalOfferPower = this.offerPokemons.reduce(
+            (total, current) => total + current.power,
+            0
+          );
+          this.updateTradeMessage();
+        });
       }
-      this.totalOfferPower = this.offerPokemons.reduce((total, current) => total + current.power, 0);
+      this.totalOfferPower = this.offerPokemons.reduce(
+        (total, current) => total + current.power,
+        0
+      );
       this.updateTradeMessage();
     },
     updateTradeMessage() {
       if (this.totalGivenPower == 0 && this.totalOfferPower == 0) {
         this.tradeMessage = "";
-      } else if (this.totalGivenPower < this.totalOfferPower){
+      } else if (this.totalGivenPower < this.totalOfferPower) {
         this.tradeMessage = "Trade is worth it";
         this.worthIt = true;
       } else {
@@ -231,16 +279,53 @@ export default {
     },
     tradeDidPress() {
       if (this.totalGivenPower == 0 && this.totalOfferPower == 0) {
-        alert('Choose your pokemons');
-      } else if(!this.worthIt) {
-        alert('Trade is not worth it');
+        alert("Choose your pokemons");
+      } else if (!this.worthIt) {
+        alert("Trade is not worth it");
       } else {
-        console.log("GIVEN");
-        console.log(this.givenPokemons);
+        console.log("else");
+        let trade = {
+          given_total_power: this.totalGivenPower,
+          offer_total_power: this.totalOfferPower,
+        };
+        axios
+          .post("http://localhost:9090/api/trades", trade)
+          .then((response) => {
+            console.log("request");
 
-        console.log("OFFER");
-        console.log(this.offerPokemons);
+            if (response.status == 200) {
+              this.givenRequest(this.givenPokemons, response.data.id);
+              this.offerRequest(this.offerPokemons, response.data.id);
+            }
+          })
+          .catch(console.error());
       }
+    },
+    givenRequest(givenList, tradeId) {
+      givenList.forEach((current) => {
+        let given = {
+          name: current.name,
+          offer: false,
+          trade_id: tradeId,
+        };
+        axios
+          .post("http://localhost:9090/api/cards", given)
+          .then(() => console.log("request given card"))
+          .catch(console.error());
+      });
+    },
+    offerRequest(offerList, tradeId) {
+      offerList.forEach((current) => {
+        let offerRequest = {
+          name: current.name,
+          offer: true,
+          trade_id: tradeId,
+        };
+        axios
+          .post("http://localhost:9090/api/cards", offerRequest)
+          .then((response) => console.log(response.data))
+          .catch(console.error());
+      });
     }
   }
 };
@@ -253,7 +338,6 @@ export default {
 
 #messageContainer {
   margin-bottom: 20px;
-
 }
 
 h2 {
@@ -264,5 +348,4 @@ h2 {
   margin-top: 10px;
   margin-bottom: 30px;
 }
-
 </style>
