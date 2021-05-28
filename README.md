@@ -4,6 +4,11 @@
 
 VueJs + NodeJs aplication where you can trade pokemon's  first generation based on their power and check trade history
 
+## Requirements
+
+- Vue.js
+- Node.js
+
 ## Gallery
 
 ### Home screen
