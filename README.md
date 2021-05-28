@@ -9,28 +9,32 @@ VueJs + NodeJs aplication where you can trade pokemon's  first generation based 
 - Vue.js
 - Node.js
 
+## Links
+[Open application](https://www.google.com/)
+
+
 ## Gallery
 
 ### Home screen
 
-<img src="-" 
-width="400" 
-height="200"/>
+<img src="https://github.com/beatrizvilalta/PokeTrade/blob/main/Images/homeScreen.png" 
+width="600" 
+height="300"/>
 
 ### Trade simulator
 
-<img src="-" 
-width="400" 
-height="200"/>
+<img src="https://github.com/beatrizvilalta/PokeTrade/blob/main/Images/TradeScreen.png" 
+width="600" 
+height="300"/>
 
 ### Pokemon List
 
-<img src="-" 
-width="400" 
-height="200"/>
+<img src="https://github.com/beatrizvilalta/PokeTrade/blob/main/Images/PokemonListScreen.png" 
+width="600" 
+height="300"/>
 
 ### Trade history
 
-<img src="-" 
-width="400" 
-height="200"/>
+<img src="https://github.com/beatrizvilalta/PokeTrade/blob/main/Images/TradeHistoryScreen.png" 
+width="600" 
+height="300"/>
