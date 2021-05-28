@@ -1,4 +1,4 @@
-# pokedex
+# PokeTrade
 
 ## Project setup
 ```
