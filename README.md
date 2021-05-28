@@ -9,8 +9,11 @@ VueJs + NodeJs aplication where you can trade pokemon's  first generation based 
 - Vue.js
 - Node.js
 
-## Links
-[Open application](https://www.google.com/)
+## Running
+1. Navigate to the BackEnd folder and run 'npm install' to install the dependencies.
+2. Run with 'npm start'.Listen on port 'localhost:9090'
+3. Navigate to the FrontEnd folder and run 'npm install'
+4. Run with npm run serve on port 'localhost:8080'
 
 
 ## Gallery
