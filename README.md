@@ -8,6 +8,7 @@ VueJs + NodeJs aplication where you can trade pokemon's  first generation based 
 
 - Vue.js
 - Node.js
+- MySQL
 
 ## Running
 1. Navigate to the BackEnd folder and run 'npm install' to install the dependencies.
