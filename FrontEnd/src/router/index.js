@@ -25,7 +25,7 @@ const routes = [
   },
 {
     path: '/historic',
-    name: 'historic',
+    name: 'Historic',
     component: Historic
   }
 ]

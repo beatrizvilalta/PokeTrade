@@ -198,6 +198,7 @@
 
 <script>
 import axios from "axios";
+import router from "../router/index";
 
 export default {
   data() {
@@ -296,6 +297,7 @@ export default {
             if (response.status == 200) {
               this.givenRequest(this.givenPokemons, response.data.id);
               this.offerRequest(this.offerPokemons, response.data.id);
+              router.push('Historic')
             }
           })
           .catch(console.error());
