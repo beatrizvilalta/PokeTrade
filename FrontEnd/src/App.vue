@@ -2,9 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/trades">Simulate trade</router-link> |
+      <router-link to="/trades">Trade Simulator</router-link> |
       <router-link to="/pokemons">Pokemon List</router-link> |
-      <router-link to="/historic">Historic</router-link>
+      <router-link to="/historic">Trade History</router-link>
     </div>
     <router-view/>
   </div>

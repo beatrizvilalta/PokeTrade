@@ -31,7 +31,6 @@ export default {
   created: function () {
     axios.get(this.url).then((response) => {
       this.pokemon.power = response.data.base_experience;
-      console.log(this.pokemon.power);
       this.pokemon.front = response.data.sprites.front_default;
       this.pokemon.back = response.data.sprites.back_default;
       this.currentImg = this.pokemon.front;

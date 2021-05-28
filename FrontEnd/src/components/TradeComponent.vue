@@ -292,7 +292,6 @@ export default {
         axios
           .post("http://localhost:9090/api/trades", trade)
           .then((response) => {
-            console.log("request");
 
             if (response.status == 200) {
               this.givenRequest(this.givenPokemons, response.data.id);
@@ -312,7 +311,7 @@ export default {
         };
         axios
           .post("http://localhost:9090/api/cards", given)
-          .then(() => console.log("request given card"))
+          .then()
           .catch(console.error());
       });
     },
@@ -325,7 +324,7 @@ export default {
         };
         axios
           .post("http://localhost:9090/api/cards", offerRequest)
-          .then((response) => console.log(response.data))
+          .then()
           .catch(console.error());
       });
     }
