@@ -10,11 +10,26 @@ VueJs + NodeJs aplication where you can trade pokemon's  first generation based 
 - Node.js
 - MySQL
 
-## Running
+## Running instruction
+
 1. Navigate to the BackEnd folder and run 'npm install' to install the dependencies.
 2. Run with 'npm start'.Listen on port 'localhost:9090'
 3. Navigate to the FrontEnd folder and run 'npm install'
 4. Run with npm run serve on port 'localhost:8080'
+
+### Running backend
+```
+ $ cd BackEnd
+ $ npm instal
+ $ npm start
+```
+
+### Running frontend
+```
+ $ cd FrontEnd
+ $ npm instal
+ $ npm run serve
+```
 
 
 ## Gallery
