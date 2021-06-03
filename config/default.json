@@ -1,0 +1,15 @@
+{
+  "server": {
+    "port" : 9090
+  },
+  "development": {
+    "DB_HOST": "localhost",
+    "DB_USERNAME": "pokeuser",
+    "DB_PASSWORD": "pokessword"
+  },
+  "production": {
+    "DB_HOST": "",
+    "DB_USERNAME": "",
+    "DB_PASSWORD": ""
+  }
+}
