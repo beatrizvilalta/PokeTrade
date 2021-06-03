@@ -12,6 +12,8 @@ const connection = new Sequelize(config.get('DB_NAME'), config.get('DB_USERNAME'
     min:  0,
     acquire: 30000,
     idle: 10000
+  },
+  dialectOptions: {
   }
 });
 
