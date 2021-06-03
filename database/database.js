@@ -12,7 +12,7 @@ const connection = new Sequelize(config.get('DB_NAME'), config.get('DB_USERNAME'
   //         require: true,
   //         rejectUnauthorized: false
   //     }
-  //   }
+    
 });
 
 module.exports = connection;
