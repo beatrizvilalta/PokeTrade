@@ -3,13 +3,15 @@
     "port" : 9090
   },
   "development": {
+    "DB_NAME": "poketrade",
     "DB_HOST": "localhost",
     "DB_USERNAME": "pokeuser",
     "DB_PASSWORD": "pokessword"
   },
   "production": {
-    "DB_HOST": "",
-    "DB_USERNAME": "",
-    "DB_PASSWORD": ""
+    "DB_NAME": "d35li0dgb50is0",
+    "DB_HOST": "ec2-52-5-247-46.compute-1.amazonaws.com",
+    "DB_USERNAME": "abahtmahkrinun",
+    "DB_PASSWORD": "ed895db5000d8efc5a45a561827befeb74a5f3af05aa5d46c11ed885e6544013"
   }
 }
