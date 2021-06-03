@@ -3,6 +3,10 @@ module.exports = () => {
     const Sequelize = require("sequelize");
     const controller = {};
 
+    controller.initialPage = (req, res) => {
+        res.send('Initial page');;
+    }
+
     controller.listTrades = (req, res) => {
         Trade.findAll({
             raw: true, order: [
