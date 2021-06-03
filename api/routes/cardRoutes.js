@@ -3,7 +3,7 @@ module.exports = app => {
 
     app.route('/api/cards')
         .get(controller.listCards)
-        .post(controller.createCard);
+        .post(controller.createCard)
 
     app.route('/api/cards/:trade_id')
         .get(controller.listCardsByTrade)
