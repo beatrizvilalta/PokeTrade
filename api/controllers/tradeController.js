@@ -2,9 +2,14 @@ module.exports = () => {
     const Trade = require("../../database/Trade");
     const Sequelize = require("sequelize");
     const controller = {};
+    const dbEngine = process.env.DB_ENVIRONMENT || 'development';
+    const config = require('config');
 
     controller.initialPage = (req, res) => {
-        res.send('Initial page');;
+        res.send(
+        [JSON.stringify(process.env),
+        dbEngine,
+        JSON.stringify(config)]);
     }
 
     controller.listTrades = (req, res) => {
