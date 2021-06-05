@@ -13,6 +13,7 @@
 <script>
 import Historic from "@/components/HistoricComponent.vue";
 import axios from 'axios';
+import BACKEND_URL from '../../utils/requests';
 
 export default {
   name: "historic",
@@ -26,7 +27,7 @@ export default {
   },
   created() {
     axios
-    .get("http://localhost:9090/api/trades")
+    .get(BACKEND_URL + "/api/trades")
     .then((response) => {
       this.trades = response.data;
     }).catch(console.error());

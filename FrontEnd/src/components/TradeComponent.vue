@@ -199,6 +199,7 @@
 <script>
 import axios from "axios";
 import router from "../router/index";
+import BACKEND_URL from '../../utils/requests';
 
 export default {
   data() {
@@ -290,7 +291,7 @@ export default {
           offer_total_power: this.totalOfferPower,
         };
         axios
-          .post("http://localhost:9090/api/trades", trade)
+          .post(BACKEND_URL+ "/api/trades", trade)
           .then((response) => {
 
             if (response.status == 200) {
@@ -310,7 +311,7 @@ export default {
           trade_id: tradeId,
         };
         axios
-          .post("http://localhost:9090/api/cards", given)
+          .post(BACKEND_URL + "/api/cards", given)
           .then()
           .catch(console.error());
       });
@@ -323,7 +324,7 @@ export default {
           trade_id: tradeId,
         };
         axios
-          .post("http://localhost:9090/api/cards", offerRequest)
+          .post(BACKEND_URL + "/api/cards", offerRequest)
           .then()
           .catch(console.error());
       });

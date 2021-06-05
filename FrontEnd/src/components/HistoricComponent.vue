@@ -36,11 +36,12 @@
 
 <script>
 import axios from 'axios';
+import BACKEND_URL from '../../utils/requests';
 
 export default {
   created() {
     axios
-    .get("http://localhost:9090/api/cards/"+ this.id)
+    .get(BACKEND_URL + "/api/cards/"+ this.id)
     .then((response) => {
       
       this.offerCards = response.data.filter(poke => { return poke.offer } );
