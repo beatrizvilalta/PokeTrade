@@ -6,12 +6,14 @@
     "DB_NAME": "poketrade",
     "DB_HOST": "localhost",
     "DB_USERNAME": "pokeuser",
-    "DB_PASSWORD": "pokessword"
+    "DB_PASSWORD": "pokessword",
+    "DB_CONNECTION_STRING":""
   },
   "production": {
     "DB_NAME": "d35li0dgb50is0",
     "DB_HOST": "ec2-52-5-247-46.compute-1.amazonaws.com",
     "DB_USERNAME": "abahtmahkrinun",
-    "DB_PASSWORD": "ed895db5000d8efc5a45a561827befeb74a5f3af05aa5d46c11ed885e6544013"
+    "DB_PASSWORD": "ed895db5000d8efc5a45a561827befeb74a5f3af05aa5d46c11ed885e6544013",
+    "DB_CONNECTION_STRING": "dbname=d35li0dgb50is0 host=ec2-52-5-247-46.compute-1.amazonaws.com port=5432 user=abahtmahkrinun password=ed895db5000d8efc5a45a561827befeb74a5f3af05aa5d46c11ed885e6544013 sslmode=require"
   }
 }

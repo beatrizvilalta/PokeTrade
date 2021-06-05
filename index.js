@@ -1,6 +1,8 @@
 const app = require('./config/express')();
 const port = app.get('port');
 const connection = require("./database/database");
+const dbEngine = process.env.DB_ENVIRONMENT || 'development';
+const config = require('config')[dbEngine];
 // const { Pool } = require('pg');
 
 //Database connection
@@ -10,6 +12,7 @@ connection
         console.log("Connected")
     })
     .catch((errorMsg) => {
+        console.log("DATABASE NAME:" + JSON.stringify(config));
         console.log(errorMsg);
     });
 
