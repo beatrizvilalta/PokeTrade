@@ -1,5 +1,8 @@
 module.exports = app => {
     const controller = require('../controllers/tradeController')();
+    
+    app.route('/')
+        .get(controller.initialPage)
 
     app.route('/api/trades')
         .get(controller.listTrades)

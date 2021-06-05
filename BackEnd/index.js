@@ -1,9 +1,6 @@
 const app = require('./config/express')();
 const port = app.get('port');
-const Sequelize = require("sequelize");
 const connection = require("./database/database");
-const Trade = require("./database/Trade");
-const Card = require("./database/Card");
 
 //Database connection
 connection
@@ -11,9 +8,7 @@ connection
     .then(() => {
         console.log("Connected")
     })
-    .catch((errorMsg) => {
-        console.log(errorMsg);
-    });
+    .catch(console.log);
 
 app.listen(port, () => {
     console.log('Listening at ' + port)
