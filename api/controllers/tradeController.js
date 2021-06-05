@@ -6,10 +6,7 @@ module.exports = () => {
     const config = require('config');
 
     controller.initialPage = (req, res) => {
-        res.send(
-        [JSON.stringify(process.env),
-        dbEngine,
-        JSON.stringify(config)]);
+        res.send('Initial Page');
     }
 
     controller.listTrades = (req, res) => {
